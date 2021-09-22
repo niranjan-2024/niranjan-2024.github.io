@@ -31,10 +31,37 @@ div {
   padding: 30px;
   margin: 20px;
 }
+#login {cursor:not-allowed;}
 
 </style>
 </head>
-<body><center><div>
+<body>
+<script type='text/javascript'>
+
+function foo() {
+
+
+var user_choice = window.confirm('Do you want to start the exam?');
+
+
+if(user_choice==true) {
+
+
+window.location='https://niranjan-2024.github.io/main.html ';  // you can also use element.submit() if your input type='submit' 
+
+
+} else {
+
+
+return false;
+
+
+}
+}
+
+
+</script>
+<center><div>
 
 <center><img src="kiet.png"  width="600" height="200">
 <br>
@@ -46,10 +73,8 @@ div {
 
 <form class="login-form">
 <input type="text" placeholder="username"/><br>
-<input type="password" placeholder="password"/>
-</form>
-<form id="login" action="main.html">
-<input type="submit" value="Login" />
+<input type="password" placeholder="password" required/>
+<input type="submit" onClick="foo()" value="Login" />
 </form>
 
 </center>
