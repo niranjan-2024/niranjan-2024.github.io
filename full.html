@@ -64,9 +64,17 @@ body {
 <body>
 <CENTER><u><h1>TEST</h1><h2>All The Best</h2></u></center>
 
+<script>
+function myFunction() {
+  confirm("Are you sure to submit");
+  confirm("Once submitted marks cannot be changed");
+}
+</script>
+
 <div id="quiz"></div>
-<button id="submit">Submit Quiz</button>
+<button id="submit" onclick="myFunction()">Submit Quiz</button>
 <div id="results"></div>
+
 
 <script>
 
