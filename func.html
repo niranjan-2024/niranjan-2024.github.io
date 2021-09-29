@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+form {
+width: 300px;
+height: 280px;
+margin: auto;
+border: 8px solid black;
+border-radius: 10px;
+padding: 10px;
+background-color: yellow;
+}
+#num{
+width: 250px;
+background-color: pink;
+border: 5px solid black;
+border-radius: 20px;
+padding: 15px;
+margin: auto;
+}
+input
+{
+width: 50px;
+background-color: black;
+color: white;
+border: 3px solid orange;
+border-radius: 50px;
+padding: 10px;
+margin: 4px;
+font-size: 12px;
+}
+body {
+  background-image: url('bg for cam.jfif');
+}
+#result{
+font-size:20px;
+}
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+<center>
+
+<script>
+function displaylog()
+{
+  var x=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=Math.log(x);
+}
+function displaysin()
+{
+  var x=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=Math.sin(x);
+}
+function displaycos()
+{
+  var x=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=Math.cos(x);
+}
+function displaytan()
+{
+  var x=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=Math.tan(x);
+}
+function displaysqrt()
+{
+  var x=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=Math.sqrt(x);
+}
+function displaylog10()
+{
+  var x=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=Math.log10(x);
+}
+function displaysq()
+{
+  var x=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=Math.pow(x, 2);
+}
+function displaycube()
+{
+  var x=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=Math.pow(x, 3);
+}
+function displayfact(){
+var i, f;
+f = 1;
+var x = document.getElementById("num").value;
+for(i = 1; i <= x; i++)  
+{
+f = f * i;
+}
+i = i - 1;  
+document.getElementById("result").innerHTML =   f ;
+}
+</script>
+<h1>Scientific functions</h1>
+<form>
+   <input type="text" id="num"><br><br>
+  <table>
+  <tr>
+<td><input type="button" onclick="displaylog()" value="log"></td>
+<td><input type="button" onclick="displaysin()" value="sin"></td>
+<td><input type="button" onclick="displaycos()" value="cos"></td>
+</tr>
+<tr>
+<td><input type="button" onclick="displaytan()" value="tan"></td>
+<td><input type="button" onclick="displaysqrt()" value="sqrt"></td>
+<td><input type="button" onclick="displaylog10()" value="log10"></td>
+</tr>
+<tr>
+<td><input type="button" onclick="displaysq()" value="sq"></td>
+<td><input type="button" onclick="displaycube()" value="cube"></td>
+<td><input type="button" onclick="displayfact()" value="fact"></td>
+</tr>
+</table><br>
+<span id="result"></span>
+  </form>
+  <br><br><br><br><br>
+  <a href="calculator.html"><span style=" border:5px solid; font-size:25px; border-color:black; padding:20px; background-color:yellow;">Simple</span></a>
+  
+</center>
+</body>
+</html>
+
