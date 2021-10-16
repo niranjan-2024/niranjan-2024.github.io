@@ -12,10 +12,11 @@
 		width: 80px;
 		height: 52px;
 		margin: auto;
-		border: 1px solid gray;
+		border: 5px solid black;
 		border-radius: 6px;
 		font-size: 30px;
 		text-align: center;
+		color: red;
 	}
 
 	/* Reset Button */
