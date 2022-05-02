@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Profile Card</h2>
+
+<div class="card">
+  <img src="2.jpg" alt="John" style="width:100%", height = 200 >
+  <h1>Niranjan Kalra</h1>
+  <p class="title">Engineer And Future SDE</p>
+  <p>KIET GZB</p>
+  <div style="margin: 24px 0;">
+    <a href="https://auth.geeksforgeeks.org/user/niranjan2024en1128/practice/
+"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png",width = 40, height = 40></a> 
+    <a href="https://www.hackerrank.com/Niranjan_C_1128
+"><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png",width = 40, height = 40></a>  
+    <a href="https://g.dev/niranjan-2024
+"><img src="data:image/png;base64,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",width = 40, height = 40></i></a>  
+    <a href="https://github.com/niranjan-2024
+"><img src="data:image/png;base64,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",width = 40, height = 40></a> 
+  </div>
+  <p><button>niranjankalra@gmail.com<br>Mob.9639555536</button></p>
+</div>
+
+</body>
+</html>
