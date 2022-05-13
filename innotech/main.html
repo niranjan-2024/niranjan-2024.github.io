@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>Electro-Geeks</title>
+  
+  
+  
+  
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style media="screen">
+  body{
+background:#e6e6e6;
+}
+#slider{
+width:80%;
+margin:0px auto;
+margin-top: 30px;
+margin-bottom: 30px;
+max-width: 600px;
+position:relative;
+overflow:hidden;
+border: 10px solid white;
+box-shadow:2px 5px 10px rgba(0,0,0,0.4);;
+}
+
+.slide{
+width:100%;
+
+display:none;
+animation-name:fade;
+animation-duration:1s;
+
+}
+img{
+width:100%;
+}
+@keyframes fade{
+from{opacity:0.5;}
+to{opacity:1;}
+}
+
+.controls{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:1.5em;
+padding:15px 10px;
+border-radius:5px;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 20px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+.controls:hover{
+background:white;
+transition:0.3s;
+}
+
+.controls:active{
+color:grey;
+}
+.ins{
+font-size:20px;
+color:green;
+padding:10px;
+}
+
+.ind{
+font-size:30px;
+color:red;
+padding:10px;
+}
+
+#left-arrow{
+left:10px;
+}
+
+#right-arrow{
+right:10px;
+}
+
+#dots-con{
+
+text-align:center;
+}
+.dot{
+display:inline-block;
+background:grey;
+padding:8px;
+border-radius:50%;
+margin:10px 5px;
+}
+
+.active{
+background:rgb(7, 67, 213);
+}
+
+@media (max-width:576px){
+#slider{width:100%;
+
+}
+
+.controls{
+  font-size:1em;
+}
+
+#dots-con{
+  display:none;
+}
+.h1 {
+  padding: 35px;
+}
+}
+  </style>
+</head>
+<body>
+<hr style="height:5px;border-width:0;color:green;background-color:green">
+<h1 class="h1" style="font-size:300%;"><center><b>Electro-Geeks</b></center></h1>
+<hr style="height:5px;border-width:0;color:green;background-color:green">
+
+
+    <!--Slider-->
+  <div id="slider">
+    <div class="slide" style="background:dodgerBlue;">
+      <img src="vlsi.jpg" >
+    </div>
+
+    <div class="slide" style="background:coral;">
+       <img src="cs.jpg" >
+    </div>
+
+    <div class="slide" style="background:crimson;">
+      <img src="de.jpg" >
+    </div>
+
+    <div class="slide" style="background: #6edf10;">
+      <a href = "https://niranjan-2024.github.io/quiz/index.html"><img src="ss.jpg" ></a>
+    </div>
+
+    <!--Controlling arrows-->
+    <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </span>
+    <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+  </span>
+  </div>
+    <div id="dots-con">
+   <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+   </div>
+
+<p class="ind"><b>How To Use:</b></p>
+<p class="ins"><b>1.Choose subject from arrow button above.<br>2.Click on image to start quiz.<br>3.Be honest its just for practice.</b></p>
+
+
+<footer>
+   <div class="content">
+     <div class="left box">
+       <div class="upper">
+         <div class="topic">About us</div>
+         <p>Electro-Geeks is a Platform where you can pracice ,
+         Electronics subjective quizes of difeerent subjects to judge yourself.</p>
+       </div>
+       <div class="lower">
+         <div class="topic">Contact us</div>
+         <div class="phone">
+           <a href="#"><i class="fas fa-phone-volume"></i>+91 9876543210</a>
+         </div>
+         <div class="email">
+           <a href="#"><i class="fas fa-envelope"></i>niranjankalra@gmail.com</a>
+         </div>
+       </div>
+     </div>
+     <div class="middle box">
+       <div class="topic">Quizzes Available</div>
+       <div><a href="#">Signal And Systems</a></div>
+       <div><a href="#">Control Systems</a></div>
+       <div><a href="#">VLSI Technology</a></div>
+       <div><a href="#">Digital Electronics</a></div>
+       <div><a href="#">Micoprocessor(coming soon)</a></div>
+       <div><a href="#">Antenna(coming soon)</a></div>
+     </div>
+     <div class="right box">
+       <div class="topic">Subscribe us</div>
+       <form action="#">
+         <input type="text" placeholder="Enter email address">
+         <input type="submit" name="" value="Send">
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </form>
+     </div>
+   </div>
+   <div class="bottom">
+     <p>Copyright &#169; 2020 <a href="#">Electro-Geeks</a> All rights reserved</p>
+   </div>
+ </footer>
+
+<script type="text/javascript">
+var slides = document.querySelectorAll(".slide");
+var dots = document.querySelectorAll(".dot");
+var index = 0;
+
+
+function prevSlide(n){
+  index+=n;
+  console.log("prevSlide is called");
+  changeSlide();
+}
+
+function nextSlide(n){
+  index+=n;
+  changeSlide();
+}
+
+changeSlide();
+
+function changeSlide(){
+
+  if(index>slides.length-1)
+    index=0;
+
+  if(index<0)
+    index=slides.length-1;
+
+
+
+    for(let i=0;i<slides.length;i++){
+      slides[i].style.display = "none";
+
+      dots[i].classList.remove("active");
+
+
+    }
+
+    slides[index].style.display = "block";
+    dots[index].classList.add("active");
+
+
+
+}
+
+
+
+</script>
+</body>
+</html>
+  
+  
+  
+  
+
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+  
+
+</body>
+
+</html>
+ 
