@@ -171,6 +171,60 @@ background:rgb(7, 67, 213);
   </style>
 </head>
 <body>
+    
+    <div class="wrapper">
+   <!----   <header>Text To Speech</header>
+      <form action="#">-->
+        <div class="row">
+         <!---- <label>Enter Text</label>
+          <textarea></textarea>
+        </div>-->
+        <div class="row"> 
+         <!---- <label>Select Voice</label>-->
+          <div class="outer">
+            
+          </div>
+        </div>
+        <button>Instructions</button>
+      </form>
+    </div>
+
+<script>
+const textarea = document.querySelector("textarea"),
+voiceList = document.querySelector("button"),
+speechBtn = document.querySelector("button");
+
+let synth = speechSynthesis,
+isSpeaking = true;
+
+voices();
+
+function voices(){
+    for(let voice of synth.getVoices()){
+        let selected = voice.name === "Google US English" ? "selected" : "";
+        //let option = `<option value="${voice.name}" ${selected}>${voice.name} (${voice.lang})</option>`;
+       // voiceList.insertAdjacentHTML("beforeend", option);
+    }
+}
+
+//synth.addEventListener("voiceschanged", voices);
+
+function textToSpeech(text){
+    let utterance = new SpeechSynthesisUtterance(text);
+    for(let voice of synth.getVoices()){
+        if(voice.name === voiceList.value){
+            utterance.voice = voice;
+        }
+    }
+    synth.speak(utterance);
+}
+
+speechBtn.addEventListener("click", e =>{
+    e.preventDefault();
+    textToSpeech("Welcome to ELECTRO-GEEKS , step 1 - Choose subject from arrow button above , step 2 - Click on image to start quiz , AND , Be honest its just for practice.");   
+});
+</script>
+    
 <hr style="height:5px;border-width:0;color:green;background-color:green">
 <h1 class="h1" style="font-size:300%;"><center><b>Electro-Geeks</b></center></h1>
 <hr style="height:5px;border-width:0;color:green;background-color:green">
@@ -251,7 +305,7 @@ background:rgb(7, 67, 213);
      </div>
    </div>
    <div class="bottom">
-     <p>Copyright &#169; 2020 <a href="#">Electro-Geeks</a> All rights reserved</p>
+     <p>Copyright &#169; 2022 <a href="#">Electro-Geeks</a> All rights reserved</p>
    </div>
  </footer>
 
